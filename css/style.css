@@ -1,0 +1,322 @@
+.wrapper{
+    overflow: hidden;
+    min-height: 100%;
+    position: relative;
+}
+body{
+    background-color:brown;
+    
+}
+.page{
+    padding: 30px;
+    
+}
+/*
+Flexbox - це цілий модуль,
+що містить у  собі набір властивостей та їх значення як для 
+батька flex-контейнера,так і для його дочірніх елементів
+flex-елементів.
+Основною перевагою гнучкої FLEX розмітки є можливість
+змінювати ширину/висоту простір навколо та
+порядок flex-елементів,для того,шоб найкращим
+чином заповнити доступний простір flex-контейнера.
+*/
+
+.block{
+    border: 10px solid white;
+    background-color: aqua;
+
+    /* Властивості Flex-контейнера */
+    display: flex;
+    
+    /*Визначає flex-контейнер,
+    блоковий або малий залежить від переданого значення.
+    Перетворює всі свої прямі,
+    дочірні елементи у flex-елементи.*/
+
+
+
+}
+/*Flex-елементи */
+
+.block__item{
+    
+    color:aliceblue;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    background-color:blueviolet;
+    padding: 10px;
+    text-align: center;
+    border: 10px solid black;
+}
+.block__item_big{
+   
+    height: 200px;
+}
+.block__inline{
+    border: 10px solid white;
+    background-color: aqua;
+
+    display: inline-flex;
+    
+}
+.block__inline__item{
+
+   
+    color:aliceblue;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    background-color:rgb(122, 53, 187);
+    padding: 10px;
+    text-align: center;
+    border: 10px solid black;
+}
+.block__flex_wrap{
+
+
+    border: 10px solid white;
+    background-color: aqua;
+
+    display: flex;
+
+    /* Визначає,чи зможуть flex-елементи переміщатися
+    на наступні рядки,коли перестають поміщатися 
+    всередені flex-контейнера.
+    nowrap - (за замовченням) Flex-елементи не можуть переміщатися на наступні рядки flex-контейнера.
+    wrap - Flex-елементів зможуть переміщатися на наступні рядки flex-контейнера.
+    wrap-reverse - Flex-елементи зможуть переміщатися на наступні рядки flex- контейнера, але у зворотньому порядку*/
+    flex-wrap: wrap;
+
+    
+
+}
+.block__item__flex_wrap{
+
+    color:aliceblue;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    background-color:blueviolet;
+    padding: 10px;
+    text-align: center;
+    border: 10px solid black;
+}
+
+.block__justify{
+    border: 10px solid white;
+    background-color: rgb(255, 0, 153);
+
+    display: flex;
+    flex-wrap: wrap;
+    
+    /*justify-content
+    Визначає вирівнювання вздовж основної осі
+    (напрямок залежить від значення властивості flex-direction).
+    flex-start - Значення за промовчянням (не потрібно вкзаувати).
+    Flex-елементи притискаються до початку осі.
+    flex-end -Flex-елементи притискаються вкінець осі.
+    center - Flex -елементи розташовуються в центрі основнох осі.*/
+
+    justify-content:flex-end;
+
+}
+.block__item__justify{
+    color:aliceblue;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    background-color:blueviolet;
+    padding: 10px;
+    text-align: center;
+    border: 10px solid black;
+
+}
+.block__space{
+    border: 10px solid white;
+    background-color: rgb(38, 255, 0);
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center ;
+    /*
+    space-beetwen - Flex-елементи розміщуються
+    поступово по основновній осі.
+    Перший елемент знаходиться на початку осі,
+    останній елемент знаходиться наприкінці осі.
+    між елементами постійно однаковий простір
+    space-around-Flex-елементи розташовуються ріномірно
+    по основній осі. До кожного flex-елементів 
+    додається простір ліворуч і праворуч.
+    space-evenly- Flex - елементи розташовуються рівномірно по 
+    основній осі з однаковим простором навколо них.*/
+   
+   
+   /*aligh-items
+   Визначає вирівнювання вздовж поперечної осі
+   (напрямок задеєить від значення властивості flex-direction).
+   stretch - Значення за промовчанням ( не потрібно вказувати).
+   Flex- елементи розтягуються весь розмір поперечної осі
+   flex-контейнера.
+   flex-start - Flex-елементи притискаються до
+   початку поперечної осі.
+   flex-end - Flex-елементи притискаються вкінець поперечної осі.*/
+
+    
+    align-items: stretch;
+    /*flex-direcion
+    Встановлює основну вісь таким чином визначає напрямок flex-елементів,
+    розташованих у flex-контейнері
+    row - значення за промовченням( не потрібно вказувати).
+    Основнавісь горизонтальна.Всі flex-елементи розташовуються ліворуч по горизонталі
+    column-*/
+    flex-direction:  row;
+    /* 
+    gap
+    проміжок між Flex-елементами
+    */
+    /* gap: 20px; */
+
+    column-gap: 15px;
+    row-gap: 30px;
+    /*погано працює з відсотковим bassis*/
+
+}
+
+.block__diraction{
+    border: 10px solid white;
+    background-color: aqua;
+
+    display: flex ;
+    flex-wrap: wrap;
+    justify-content: center ;
+    height: 200px;
+    align-items: stretch;
+
+}
+.block__item__diraction{
+    color:aliceblue;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    background-color:blueviolet;
+    padding: 10px;
+    text-align: center;
+    border: 10px solid black;
+    flex: 0 1 33.333%;
+    
+    /* Властивості FLEX -елементів.Застосовується для flex-елемента,
+    дочірнього об'єкта flex-контейнера*/
+
+
+}
+.block__item__diraction:nth-child(2){
+
+
+    /*
+    align-self
+    Перевизначає для конкретного flex-елемента
+    вирівнювання вздовж поперечної осі
+    (напрямок залежить від значення якості flex_direction).*/
+    
+    align-self: center;
+
+
+    /*
+    flex-grow - 0 заборонено. 1 дозволено. (за  замовченням - 0)
+    Визначає можливість елементів збільшуватись
+    у розмірі,при необхідность заповнюючи flex-контейнер
+
+    flex-shrink - 0 заборонено. 1 дозволено. ( за замовченням - 1)
+    Визначає можливість елемента зменшуватись
+    у розмірі,при необхідності заповнюючи весь flex-контейнер.
+
+    flex=basis - Визначає базовий розмір елемента за умовчанням, 
+    до розподілу простору,що залишився.
+    Значаення можуть бути у відсотках,пікселях тощо.
+    auto-розмір контену */
+
+    /*
+    flex-grow:0;
+    flex-shrink: 1;
+    flex: 200px; 
+    */
+    flex: 0 1 200px;
+
+}
+.block__item__diraction span{
+    display: block;
+}
+.flex{
+    color: aliceblue;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 40px;
+
+}
+h1{
+    font-size: 24px;
+
+
+}
+.hr{
+    color: rgb(42, 165, 89);
+}
+.text{
+    line-height: 120%;
+}
+
+
+
+
+
+
+
+.cards{
+display: flex;
+margin: 0px -15px;
+
+
+}
+.cards__item{
+    max-width: 100%;
+    background-color: rgb(17, 17, 16);
+    padding: 15px;
+    box-shadow: 0 0 25px red;
+
+
+}
+.item-card{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+
+    
+
+}
+.item-card__image{
+   
+
+
+}
+.item-card__image img{
+    max-width: 100%;
+}
+.item-card__text{
+    color: rgb(250, 215, 215);
+    flex-grow: 1 1 auto;
+
+}
+.item-card__button{
+background-color: rgb(177, 226, 43);
+padding: 5px;
+}
+.cards__column{
+    flex: 0 1 33.333%;
+    padding: 0px 15px;
+
+}
